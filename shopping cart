@@ -12,5 +12,6 @@ if __name__ == '__main__':
 def add_to_cart():
     if request.method == 'POST':
         item = request.form['item']
+        session['content'] = item #是这样吗，还是用append?
         return redirect('/')
     return redirect('/')
