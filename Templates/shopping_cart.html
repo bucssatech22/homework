@@ -1,3 +1,16 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>购物车</title>
+</head>
+<body>
+    <h2>购物车</h2>
+    <ul>
+        {% for item in cart_items %}
+            <li>{{ item }}</li>
+        {% endfor %}
+    </ul>
+
 <form method="POST" action="/add">
     <input type="text" id="verif" name="verif"/>
     <button type="submit">购买</button>

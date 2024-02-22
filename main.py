@@ -6,7 +6,9 @@ app.secret_key = 'secret_key'
 
 @app.route('/')
 def index():
-    return render_template('shopping_cart.html')
+    cart_items = session.get('cart_items', [])
+    return render_template('shopping_cart.html', cart_items=cart_items)
+
 
 @app.route('/add', methods=['POST'])
 def add_to_cart():
@@ -16,7 +18,6 @@ def add_to_cart():
     session['cart_items'].append(item)
     session.modified = True
     return redirect(url_for('index'))
-
 
 if __name__ == '__main__':
     app.run(debug=True)
