@@ -19,5 +19,14 @@ def add_to_cart():
     session.modified = True
     return redirect(url_for('index'))
 
+@app.route('/remove', methods=['POST'])
+def remove_from_cart():
+    item_to_remove = request.form.get('verif_remove')  
+    if 'cart_items' in session:
+        if item_to_remove in session['cart_items']:  
+            session['cart_items'].remove(item_to_remove) 
+            session.modified = True
+    return redirect(url_for('index'))
+
 if __name__ == '__main__':
     app.run(debug=True)
