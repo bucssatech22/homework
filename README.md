@@ -12,7 +12,7 @@ pip install Flask
 ## Requirements
 * 一个**输入框**用于input，一个**按钮**
 * 点击**按钮**可以将输入框的内容存入`session`
-
+haha
 ## Hint
 * 需要import的一些内容
 ``` sh
