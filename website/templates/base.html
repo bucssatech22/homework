@@ -11,6 +11,7 @@
     crossorigin="anonymous" />
 
   <title>{% block title %}Home{% endblock %}</title>
+  <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
 
 
 </head>
@@ -33,6 +34,9 @@
         </a>
         <a class="nav-item nav-link" id="home" href="/">
           Home
+        </a>
+        <a class="nav-item nav-link" id="cart-icon" href="#">
+          <i class="fa fa-shopping-cart"></i> Cart
         </a>
       </div>
     </div>
@@ -79,6 +83,9 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
     integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
     crossorigin="anonymous"></script>
+
+  <script src="{{url_for('static', filename='animate.js')}}"></script>
+
 
   <!-- <script type="text/javascript" src="{{url_for('static', filename = 'index.js')}}"></script> -->
 

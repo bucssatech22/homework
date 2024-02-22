@@ -1,0 +1,16 @@
+.flying-image {
+  position: absolute;
+  transition: top 0.5s, left 0.5s;
+  /* Adjust timing as needed */
+  z-index: 1000;
+  border-radius: 50%;
+  /* Makes the image round */
+  width: 30px;
+  /* Adjust width as needed */
+  height: 30px;
+  /* Adjust height as needed */
+  object-fit: cover;
+  /* Ensures the image maintains aspect ratio */
+  /* object-position: top; */
+  /* Centers the image within the frame */
+}
