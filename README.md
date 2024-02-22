@@ -19,5 +19,6 @@ pip install Flask
 from flask import Flask, render_template, request, redirect, session, url_for
 ```
 * Notion上的笔记和`Application-Portal-Test`的代码都可以参考！
+* 如果遇到问题优先上谷歌浏览器搜索（推荐Stackoverflow），实在不行再询问ChatGPT或者私信联系邬皓天。
 
 ## 周四检查！
