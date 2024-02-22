@@ -17,3 +17,12 @@ def home():
         flash(session['something'] + '已加入session', category='success')
         print(session['something'])
     return render_template("home.html")
+
+@views.route('/cart', methods=['GET', 'POST'])
+def cart():
+    if request.method == 'POST':
+        something = request.form['something']
+        session['something'] = something
+        flash(session['something'] + '已加入session', category='success')
+        print(session['something'])
+    return render_template("cart.html")
