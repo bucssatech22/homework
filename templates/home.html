@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+</head>
+<body>
+    <h1>Shopping Cart</h1>
+    
+    <form action="/" method="post">
+        <label>Add Item: </label>
+        <input name="item">
+        <button type="submit">Add to Cart</button>
+    </form>
+
+    <h2>Cart Items</h2>
+    <ul>
+        {% for cart_item in shopping_cart %}
+            <li>
+                {{ cart_item }}
+                <form action="/remove_item" method="post" style="display: inline;">
+                    <input type="hidden" name="item_to_remove" value="{{ cart_item }}">
+                    <button type="submit">Remove</button>
+                </form>
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
+
+
