@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create</title>
+</head>
+<body>
+    <h1>Create Your Shopping List</h1>
+
+        <form action = '/shopping' method = 'POST'>
+            <label for = "add_item"> add items</label>
+            <input 
+            type = "text"
+            name = "new_item"
+            placeholder="Enter item here" />
+            <button type = "submit" name = "add" class = "btn btn-primary">add</button>
+        </form>
+
+            {% for item in session['shopping_list'] %}
+            <form action = '/shopping' method = 'POST'>
+                <label >{{item}}</label>
+                <input type = "hidden" name = "delete_item" value = "{{item}}" />
+                <button type = "submit" name = "delete" class = "btn btn-primary">delete</button>
+            </form>
+            {% endfor %}
+        
+
+</body>
+</html>
