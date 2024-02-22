@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', function () {
     if (!animationCompleted) {
       event.preventDefault();
       let flyingImage = document.createElement('img');
-      flyingImage.src = '/static/pictures/face.png'; // Replace with the correct path
+      flyingImage.src = '/static/pictures/face.png';
       flyingImage.classList.add('flying-image');
       document.body.appendChild(flyingImage);
 
@@ -25,8 +25,8 @@ document.addEventListener('DOMContentLoaded', function () {
       setTimeout(function () {
         flyingImage.remove();
         animationCompleted = true;
-        submitButton.click(); // Programmatically click the submit button to submit the form
-      }, 1000); // Adjust time as needed for the animation
+        submitButton.click(); //  click the submit button to submit the form
+      }, 1000); //disappear time
     }
   });
 });
