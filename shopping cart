@@ -1,0 +1,15 @@
+#hw main.py
+from flask import Flask, render_template, request, redirect
+
+app = Flask(__name__)
+app.secret_key = "hajsdhtjatsth thdajskhtkdhasjt"
+#from Application-Portal-Test
+def index():
+    return render_template('index.html')
+
+@app.route('/add_to_cart', methods=['POST'])
+def add_to_cart():
+    if request.method == 'POST':
+        item = request.form['item']
+        return redirect('/')
+    return redirect('/')
