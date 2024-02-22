@@ -19,5 +19,14 @@ def add_to_cart():
     session.modified = True
     return redirect(url_for('index'))
 
+@app.route('/remove_item', methods=['POST'])
+ def remove_item():
+     if 'shopping_cart' in session and request.method == 'POST':
+         item_to_remove = request.form.get('item_to_remove')
+         if item_to_remove in session['shopping_cart']:
+             session['shopping_cart'].remove(item_to_remove)
+             session.modified = True
+     return redirect(url_for('home'))
+
 if __name__ == '__main__':
     app.run(debug=True)
