@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>购物车</title>
+	<link rel="stylesheet" href="{{ url_for('static', filename='shopping_cart.css') }}">
+</head>
+<body>
+    <form method="post">
+        <input type="text" id="verif" name="verif"/>
+        <button type="submit">增加</button>
+		<button type="submit">减少</button>
+    </form>
+</body>
+</html>
