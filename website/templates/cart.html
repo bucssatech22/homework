@@ -4,6 +4,16 @@
 <!-- try try for cssa hw1 -->
 
 
+<ul>
+  {% for item in cart_items %}
+  <li>{{ item }}
+    <form method="POST" style="display: inline;">
+      <input type="hidden" name="deleteSomething" value="{{ item }}">
+      <button type="delete" name="delete">DELETE</button>
+    </form>
+  </li>
+  {% endfor %}
+</ul>
 
 
 {% endblock %}
