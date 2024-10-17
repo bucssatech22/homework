@@ -20,6 +20,7 @@ pip3 install Flask
 * 一个新的**展示**购物车的界面
 * 一个**删除**购物车item的按钮
 * 两个页面之间可以**互相跳转**
+
 Optional:
 * 新增**添加成功**和**删除成功**的提示(Hint: flash message)
 
