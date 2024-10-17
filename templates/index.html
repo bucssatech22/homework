@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Hello World!</p>
+    <form action="/index" method="POST">
+        <input type="text" name="name1" placeholder="Enter Your Name" required />
+        <button type="submit">Add</button>
+    </form>
+    {% for name in name_list %}
+    <p>{{name}}</p>
+    {% endfor %}
+    <a href="/2"><button>Go to Second Page</button></a>
+</body>
+</html>
