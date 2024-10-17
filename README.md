@@ -1,17 +1,28 @@
 # Homework - Shopping Cart
 
 ## Setup
-* 每个人需要在repository中创建自己的branch
-* 在自己的branch上进行commit
+* 每个人需要fork repository
+* 在自己的repository上进行commit
 
 ## Install Environment
+Windows: 
 ``` sh
 pip install Flask
 ```
+Mac:
+``` sh
+pip3 install Flask
+```
 
 ## Requirements
-* 一个**输入框**用于input，一个**按钮**
-* 点击**按钮**可以将输入框的内容存入`session`
+* 一个**输入框**用于输入item
+* 一个**按钮**可以将输入框的内容存入购物车
+* 一个新的**展示**购物车的界面
+* 一个**删除**购物车item的按钮
+* 两个页面之间可以**互相跳转**
+
+Optional:
+* 新增**添加成功**和**删除成功**的提示(Hint: flash message)
 
 ## Hint
 * 需要import的一些内容
@@ -19,5 +30,6 @@ pip install Flask
 from flask import Flask, render_template, request, redirect, session, url_for
 ```
 * Notion上的笔记和`Application-Portal-Test`的代码都可以参考！
+* 如果遇到问题优先上谷歌浏览器搜索（推荐Stackoverflow），实在不行再询问ChatGPT或者私信联系邬皓天。
 
-## 周四检查！
+## 下次开会检查！
